@@ -1,1 +1,244 @@
 
+
+//import statement
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+/**
+ * @author  varshith_reddy <varshith0905>
+ * @version 1.0
+ * @since   1.0
+ */
+public class McD_Bill//class body 
+{
+	static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));//BufferedReader
+	String name[]=new String[20];//Used to store names of products purchased
+	int price[]=new int[20];//Used to store price of each product
+	int qty[]=new int[20];//Used to store quantity of products
+	int amt[]=new int[20];//Used to store amount to be paid
+	int total=0;//Used to store total bill to be paid
+	static int i=0;//Used to store position of array 
+	static String c;//Used as a continue variable
+	void veg()throws IOException//Method created to order vegetarian items
+	{
+		System.out.println("Enter 1 for McAloo Tikki(Rs.40), 2 for McVeggie(Rs.70), 3 for McGrill(Rs.55), 4 for McSpicy Paneer(Rs.105) and 5 for Veg Maharaja Mac(Rs.150)");
+		System.out.println("Enter product no.");
+		int y=Integer.parseInt(br.readLine());//Switch variable
+		switch(y)
+		{
+		case 1:name[i]="McAloo Tikki";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=40;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 2:name[i]="McVeggie";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=70;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 3:name[i]="McGrill";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=55;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 4:name[i]="McSpicy Paneer";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=105;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 5:name[i]="Veg Maharaja Mac";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=150;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		default:System.out.println("Wrong Entry please try again!");
+		}
+	}
+
+	void nonveg()throws IOException//Method to created to order non-vegetarian items
+	{
+		System.out.println("Enter 1 for Chicken McGrill(Rs.50), 2 for Filet-o-Fish(Rs.60), 3 for McChicken(Rs.90), 4 for McSpicy Chicken(Rs.135) and 5 for Chicken Maharaja Mac(Rs.175) ");
+		System.out.println("Enter product number");
+		int nv=Integer.parseInt(br.readLine());//Switch variable
+		switch(nv)
+		{
+		case 1:name[i]="Chicken McGrill";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=50;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 2:name[i]="Filet-O-Fish";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=60;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 3:name[i]="McChicken";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=90;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 4:name[i]="McSpicy Chicken";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=135;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 5:name[i]="Chicken Maharaja Mac";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=175;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		default:System.out.println("Wrong Entry please try again!");
+		}
+	}
+	void sides()throws IOException//Method created to order sides
+	{
+		System.out.println("Enter 1 for Pizza McPuff(Rs.55), 2 for French Fries(Rs.35), 3 for Spicy Veg Wrap(Rs.60), 4 for Spicy Paneer Wrap(Rs.70), 5 for Spicy Chicken Wrap(Rs.80)");
+		System.out.println("Enter product no.");
+		int s=Integer.parseInt(br.readLine());//Switch variable
+		switch(s)
+		{
+		case 1:name[i]="Pizza McPuff";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=55;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 2:name[i]="French Fries";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=35;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 3:name[i]="Spicy Veg Wrap";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=60;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 4:name[i]="Spicy Paneer Wrap";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=70;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 5:name[i]="Spicy Chicken Wrap";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=85;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		default:System.out.println("Wrong Entry please try again!");
+		}
+	}
+	void beverages()throws IOException//Method created to order beverages
+	{
+		System.out.println("Enter 1 for Coca-Cola(Rs.40), 2 for Pepsi(Rs.40), 3 for Sprite(Rs.35), 4 for Mirinda(Rs.35), 5 for Mountain Dew(Rs.40)");
+		System.out.println("Enter product number");
+		int b=Integer.parseInt(br.readLine());//Switch variable
+		switch(b)
+		{
+		case 1:name[i]="Coca-Cola";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=40;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 2:name[i]="Pepsi";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=40;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 3:name[i]="Sprite";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=35;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 4:name[i]="Mirinda";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=35;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		case 5:name[i]="Mountain Dew";
+		System.out.println("Enter quantity");
+		qty[i]=Integer.parseInt(br.readLine());
+		price[i]=40;
+		amt[i]=qty[i]*price[i];
+		total=total+amt[i];
+		break;
+		default:System.out.println("Wrong Entry please try again!");
+		}
+	}
+	void display()//Method created to print the bill to be paid
+	{
+		System.out.println("Your Bill is: ");
+		System.out.println("Product name  \t  Price  \t  Quantity  \t  Amount");
+		for(int j=0;j<i;j++)
+		{
+			System.out.println(name[j] + "  \t" +  price[j] + "\t" + qty[j] + "\t" + amt[j]);
+
+		}
+		System.out.println("Total Bill = Rs."+ total );
+	}
+	public static void main(String args[])throws IOException//Main method
+	{
+		McD_Bill obj=new McD_Bill();//Creating object of a class
+		System.out.println("Welcome to McDonald's");
+		do
+		{
+			System.out.println("Your options are: 1.Veg Burgers, 2.Non-Veg Burgers,3.Sides and 4.Beverages");
+			System.out.println("Enter your option number");
+			int x=Integer.parseInt(br.readLine());//Switch variable
+			switch(x)
+			{
+			case 1:obj.veg();//Function calling
+			break;
+			case 2:obj.nonveg();//Function calling
+			break;
+			case 3:obj.sides();//Function calling
+			break;
+			case 4:obj.beverages();//Function calling
+			break;
+			default:System.out.println("Wrong input of number");
+			}
+			i++;
+			System.out.println("Do you want to continue?(Y/N)");
+			c=br.readLine();//Continue variable
+		}while(c.equalsIgnoreCase("Y"));
+		obj.display();////Function calling
+		System.out.println("Thank you for visiting us!!");
+
+
+	}
+}
